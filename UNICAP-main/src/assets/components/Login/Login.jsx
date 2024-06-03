@@ -11,6 +11,11 @@ const Login = () => {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
+    const handleGoToRegister = () => {
+        navigate('/Registro');
+      };
+
+
     useEffect(() => {
         const token = localStorage.getItem('accessToken');
         if (token) {
@@ -28,9 +33,9 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         setLoading(true);
-        setError("");  
+        setError("");
         try {
-            const response = await axios.post("https://localhost:44365/api/Auth/Login", { 
+            const response = await axios.post("https://localhost:44365/api/Auth/Login", {
                 login,
                 password
             }, {
@@ -58,13 +63,13 @@ const Login = () => {
         }
     };
 
-    const token = localStorage.getItem('accessToken'); // Obtém o token do localStorage
+    const token = localStorage.getItem('accessToken');
 
     const axiosInstance = axios.create({
-        baseURL: 'https://localhost:44365/api/', // Define a URL base para todas as solicitações
+        baseURL: 'https://localhost:44365/api/',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}` // Inclui o token no cabeçalho de autorização
+            'Authorization': `Bearer ${token}`
         }
     });
 
@@ -96,9 +101,14 @@ const Login = () => {
                             required
                         />
                     </div>
-                    <button type="submit" className="login-button" disabled={loading}>
-                        {loading ? "Carregando..." : "Login"}
-                    </button>
+                    <div className="login-form-group">
+
+                        <button type="submit" className="login-button" disabled={loading}>
+                            {loading ? "Carregando..." : "Login"}
+                        </button>
+                        <button type="button" className="register-button" onClick={handleGoToRegister}>Registrar</button>
+
+                    </div>
                 </form>
             </div>
         </div>
