@@ -1,0 +1,28 @@
+#swiperCard {
+    width: 300px;
+    height: 380px;
+    display: none;
+    list-style: disc;
+  }
+  
+  .swiper-3d .swiper-slide-shadow {
+    background: rgba(0, 0, 0, 0);
+  }
+  
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media (max-width: 880px) {
+    #swiperCard {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 335px) {
+    .swiper-3d {
+      perspective: 1000px;
+    }
+  }

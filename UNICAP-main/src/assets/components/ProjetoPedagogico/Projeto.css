@@ -1,0 +1,41 @@
+.Title{
+    color: #690013;
+font-family: Inter;
+font-size: 28px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.TextContent {
+    color: #000;
+font-family: Inter;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.ProjetoPedagógico{
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+}
+
+@media (min-width:951px) and (max-width: 1100px){
+    
+    
+    
+}
+
+@media (max-width: 680px){
+    
+    
+   
+    
+    
+}
+
+@media(max-width:440px){
+    
+}

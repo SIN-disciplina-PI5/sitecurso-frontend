@@ -1,0 +1,126 @@
+/* Estilo inicial da barra lateral */
+#SideBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 20px 55px;
+    width: 20%;
+    max-width: 100%;
+    height: 100vh;
+    background-color: #48000d;
+    transition: transform 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  #SideBar .logo img {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo inicial dos links da barra lateral */
+  #SidenavLinksUl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+    padding-top: 50px;
+  }
+  
+  #SidenavLinksUl a {
+    cursor: pointer;
+  }
+  
+  #SidenavLinksUl .navLinksLi {
+    color: #ffffff;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  #SidenavLinksUl .navLinksLi:hover {
+    color: #000;
+    font-size: 20px;
+    transition: 0.8s;
+  }
+  
+  /* Estilo inicial do ícone de menu */
+  #menu {
+    display: none;
+  }
+  
+  #menu i {
+    color: #690013;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  /* Estilo inicial dos botões de login */
+  #SideBar .loginButtons {
+    display: flex;
+    gap: 10px;
+    margin-top: 200px;
+  }
+  
+  #SideBar .loginButton {
+    background-color: #690013;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #SideBar .loginButton:hover {
+    background-color: #7a0017;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    #SideBar {
+      width: 250px;
+      transform: translateX(-100%);
+    }
+  
+    #SideBar.active {
+      transform: translateX(0);
+    }
+  
+    #menu {
+      display: block;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1001;
+    }
+  
+    #SidenavLinksUl {
+      padding-top: 20px;
+    }
+  }
+  
+  /* Estilos para telas menores */
+  @media (max-width: 480px) {
+    #SideBar {
+      width: 200px;
+    }
+  
+    #SideBar .loginButtons {
+      flex-direction: column;
+      margin-top: 100px;
+    }
+  
+    #SideBar .loginButton {
+      padding: 8px 16px;
+    }
+  
+    #SidenavLinksUl .navLinksLi {
+      font-size: 16px;
+    }
+  }
+  

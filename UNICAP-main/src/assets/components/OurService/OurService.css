@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,500;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@1,100&display=swap');
+
+#ourService {
+    height: 100%;
+    width: 100%;
+    padding: 0px 5% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ourServiceTagContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 50px;
+}
+
+.ourServiceTag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 35px;
+
+}
+
+.CourseComplete {
+    text-align: center;
+
+}
+.CourseComplete a{
+    font-family: Inter, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    background-color: #C2842E;
+    padding: 10px 20px 10px 20px;
+    border-radius: 7px;
+
+}
+
+.ourServiceImgBg {
+    background-color: #C2842E;
+    width: 125px;
+    height: 125px;
+    min-height: 125px;
+    min-width: 125px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ourServiceContentBox {
+    height: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ourServiceTagContainer {
+    display: flex;
+    padding: 100px 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.tagTwoBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height:100%;
+    gap: 30px;
+}
+
+.ourServiceIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ourServiceImg {
+    width: 60%;
+}
+
+.ourServiceContent {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    width: 110%;
+    text-align: justify;
+}
+
+
+@media (max-width: 1400px) {
+    .tagTwoBox{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1120px) {
+    
+
+    .CourseComplete a {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 720px) {
+    .tagTwoBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .CourseComplete a {
+        margin-top: 20px; 
+    }
+
+    .ourServiceImgBg {
+        background-color: #C2842E;
+        width: 100px;
+        height: 100px;
+        min-height: 100px;
+        min-width: 100px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 940px) {
+    .ourServiceTagContainer {
+        font-size: 14px;
+    }
+
+    .ourServiceContent {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 800px) {
+    .ourServiceTagContainer {
+        padding: 3px 0;
+        margin: 70px 0px 50px;
+    }
+
+    .tagTwoBox {
+        padding: 0;
+        height: 550px;
+        justify-content: center;
+        min-width: 50%;
+    }
+}
+
+@media(max-width: 602px) {
+    .CourseComplete a{
+        font-size: 14px;
+    }
+
+}
+    
+    @media(max-width: 590px) {
+        .CourseComplete a{
+            font-family: Inter, sans-serif;
+            color: #ffffff;
+            text-align: center;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            background-color: #C2842E;
+            padding: 15px 20px 15px 20px;
+            border-radius: 7px;
+        
+        }
+        .ourServiceImgBg {
+            background-color: #C2842E;
+            width: 80px;
+            height: 80px;
+            min-height: 80px;
+            min-width: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+}
+
+
+@media(max-width: 460px) {
+    
+    .CourseComplete {
+        text-align: center;
+    
+    }
+    .CourseComplete a{
+        font-family: Inter, sans-serif;
+        color: #ffffff;
+        text-align: center;
+        font-size: 9px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        background-color: #C2842E;
+        padding: 20px 10px 20px 10px;
+        border-radius: 7px;
+    
+    }
+
+    
+}
+
+@media (max-width: 375px) {
+    .CourseComplete {
+        width:100%;
+        height:200px;        
+    }
+
+    .CourseComplete a{
+        font-family: Inter, sans-serif;
+        color: #ffffff;
+        text-align: center;
+        font-size: 7.4px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        background-color: #C2842E;
+        padding: 20px 10px 20px 10px;
+        border-radius: 7px;
+    
+    }
+    .ourServiceTag{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+

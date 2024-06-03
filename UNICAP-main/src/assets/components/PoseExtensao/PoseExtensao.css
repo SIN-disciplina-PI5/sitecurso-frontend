@@ -1,0 +1,189 @@
+.FooterContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 30px;
+}
+
+.SubContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.SubContainer .Title {
+    text-align: center;
+}
+
+.Title h1{
+    font-size: 28px
+}
+.Title p{
+    font-size: 20px
+}
+
+
+.TitleContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.TitleContent h1 {
+    color: #690013;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.TitleContent p {
+    border-radius: 35px;
+    background: #690013;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    padding: 5px 5px;
+}
+
+.Box{
+    margin-top: 20px;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+
+}
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.Box .Content h1 {
+    color: #690013;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.Content h1 {
+    color: #690013;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.Content p {
+    color: #690013;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.SubContainerContent h2{
+    text-align: left;
+    color: #690013;
+font-family: Inter;
+font-size: 20px;
+font-style: italic;
+font-weight: 800;
+line-height: normal;
+
+}
+
+.SubContainerContent .Lermais{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height:50px;
+    gap: 10px;
+}
+
+.Lermais{
+    color: #690013;
+font-family: Inter;
+font-size: 20px;
+font-style: italic;
+font-weight: 800;
+line-height: normal;
+}
+
+hr{
+    margin-top: 50px;
+    height: 1px;
+    border: 1px solid #690013;
+    margin-bottom: 50px;
+}
+
+.FotoRobotica img{
+    width: 100%;
+    height: 150px;
+}
+
+.BoxRobotica{
+display: flex;
+flex-direction: row;
+
+}
+
+@media(max-width: 1024px) {
+    .FooterContainer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.TitleContent h1 {
+    color: #690013;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.Foto img{
+    width: 100px;
+}
+
+.Content h1 {
+    
+    font-size: 25px;
+    
+}
+
+.Content p{
+    font-size: 20px;
+}
+
+.SubContainerContent .Lermais{
+    margin-top: 10px;
+    gap: 25px;
+}
+
+.Lermais{
+    margin-top: 10px;
+
+font-size: 24px;
+
+}
