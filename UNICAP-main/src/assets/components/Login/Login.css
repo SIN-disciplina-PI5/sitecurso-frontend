@@ -26,7 +26,6 @@
     margin-bottom: 20px;
 }
 
-/* Conteúdo do texto */
 .TextContent {
     color: #000;
     font-family: Inter, sans-serif;
@@ -36,7 +35,6 @@
     line-height: normal;
 }
 
-/* Grupo de formulário */
 .form-group {
     margin-bottom: 15px;
 }
@@ -49,8 +47,7 @@
 }
 
 
-/* Input de formulário */
-input[type="text"],
+input[type="email"],
 input[type="password"] {
     width: 100%;
     padding: 10px;
@@ -59,7 +56,12 @@ input[type="password"] {
     font-size: 16px;
 }
 
-/* Botão de login */
+.login-form-group{
+display: flex;
+flex-direction: column;
+gap: 20px;
+
+}
 .login-button {
     background-color: #690013;
     color: white;
