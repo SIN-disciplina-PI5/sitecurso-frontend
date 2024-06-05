@@ -99,7 +99,7 @@ const Login = () => {
                     <button type="submit" className="login-button" disabled={loading}>
                         {loading ? "Carregando..." : "Login"}
                     </button>
-                    <a link to= "/"></a>
+                    <a link to= "/Registro"></a>
                 </form>
             </div>
         </div>

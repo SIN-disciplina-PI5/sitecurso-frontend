@@ -9,10 +9,7 @@
     height: 100vh;
     background-color: #690013;
     transition: transform 0.3s ease;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    
   }
   
   #SideBar .logo img {
@@ -84,6 +81,10 @@
     #SideBar {
       width: 250px;
       transform: translateX(-100%);
+      position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     }
   
     #SideBar.active {
