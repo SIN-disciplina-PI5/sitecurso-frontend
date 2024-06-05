@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "../Login/Login.css";
+import "./Login.css";
 import unicapImage from '../../images/unicap.png';
 
 const Login = () => {
@@ -10,11 +10,6 @@ const Login = () => {
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-
-    const handleGoToRegister = () => {
-        navigate('/Registro');
-      };
-
 
     useEffect(() => {
         const token = localStorage.getItem('accessToken');
@@ -33,9 +28,9 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         setLoading(true);
-        setError("");
+        setError("");  
         try {
-            const response = await axios.post("https://localhost:44365/api/Auth/Login", {
+            const response = await axios.post("https://localhost:44365/api/Auth/Login", { 
                 login,
                 password
             }, {
@@ -63,13 +58,13 @@ const Login = () => {
         }
     };
 
-    const token = localStorage.getItem('accessToken');
+    const token = localStorage.getItem('accessToken'); // Obtém o token do localStorage
 
     const axiosInstance = axios.create({
-        baseURL: 'https://localhost:44365/api/',
+        baseURL: 'https://localhost:44365/api/', // Define a URL base para todas as solicitações
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
+            'Authorization': `Bearer ${token}` // Inclui o token no cabeçalho de autorização
         }
     });
 
@@ -101,14 +96,10 @@ const Login = () => {
                             required
                         />
                     </div>
-                    <div className="login-form-group">
-
-                        <button type="submit" className="login-button" disabled={loading}>
-                            {loading ? "Carregando..." : "Login"}
-                        </button>
-                        <button type="button" className="register-button" onClick={handleGoToRegister}>Não tem uma conta? Cadastre-se</button>
-
-                    </div>
+                    <button type="submit" className="login-button" disabled={loading}>
+                        {loading ? "Carregando..." : "Login"}
+                    </button>
+                    <a link to= "/"></a>
                 </form>
             </div>
         </div>

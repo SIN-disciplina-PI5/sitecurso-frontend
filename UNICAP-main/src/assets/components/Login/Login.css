@@ -78,24 +78,15 @@ gap: 20px;
     background-color: #550010;
 }
 
-/* Projeto Pedagógico */
 .ProjetoPedagógico {
     flex-direction: column;
     display: flex;
     gap: 10px;
 }
 
-/* Responsividade */
-@media (min-width: 951px) and (max-width: 1100px) {
-    /* Estilos para telas entre 951px e 1100px */
-}
 
-@media (max-width: 680px) {
-    /* Estilos para telas menores que 680px */
-}
 
 @media (max-width: 440px) {
-    /* Estilos para telas menores que 440px */
     .login-box {
         width: 90%;
         padding: 10px;
