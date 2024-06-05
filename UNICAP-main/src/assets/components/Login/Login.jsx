@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./Login.css";
+import "../Login/Login.css";
 import unicapImage from '../../images/unicap.png';
 
 const Login = () => {
@@ -106,7 +106,7 @@ const Login = () => {
                         <button type="submit" className="login-button" disabled={loading}>
                             {loading ? "Carregando..." : "Login"}
                         </button>
-                        <button type="button" className="register-button" onClick={handleGoToRegister}>Registrar</button>
+                        <button type="button" className="register-button" onClick={handleGoToRegister}>Não tem uma conta? Cadastre-se</button>
 
                     </div>
                 </form>
