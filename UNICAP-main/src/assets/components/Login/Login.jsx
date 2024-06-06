@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { jwtDecode } from "jwt-decode"; 
 import "./Login.css";
 import unicapImage from '../../images/unicap.png';
 
@@ -13,13 +14,18 @@ const Login = () => {
 
     useEffect(() => {
         const token = localStorage.getItem('accessToken');
+        const cargo = localStorage.getItem('userCargo');
+        const nome = localStorage.getItem('userNome');
+
         if (token) {
             const expiration = localStorage.getItem('expiration');
             if (expiration && new Date(expiration) > new Date()) {
                 navigate('/');
             } else {
                 localStorage.removeItem('accessToken');
-                localStorage.removeItem('expiration');
+                localStorage.removeItem('edxpiration');
+                localStorage.removeItem('userCargo');
+                localStorage.removeItem('userNome');
                 navigate('/login');
             }
         }
@@ -40,12 +46,18 @@ const Login = () => {
             });
 
             if (response.status === 200) {
-                const data = response.data;
-                const token = data.collections.accessToken;
+                const data = response.data.collections;
+                const token = data.accessToken;
+
+                const decodedToken = jwtDecode(token); 
+
+                const cargo = decodedToken.cargo;
+                const nome = decodedToken.nome;
                 const expiration = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
                 localStorage.setItem('accessToken', token);
                 localStorage.setItem('expiration', expiration.toISOString());
-                console.log(token);
+                localStorage.setItem('userCargo', cargo); 
+                localStorage.setItem('userNome', nome);
                 navigate("/PaginaInicial");
             } else {
                 setError(response.data.message);
@@ -58,13 +70,13 @@ const Login = () => {
         }
     };
 
-    const token = localStorage.getItem('accessToken'); // Obtém o token do localStorage
+    const token = localStorage.getItem('accessToken'); 
 
     const axiosInstance = axios.create({
-        baseURL: 'https://localhost:44365/api/', // Define a URL base para todas as solicitações
+        baseURL: 'https://localhost:44365/api/', 
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}` // Inclui o token no cabeçalho de autorização
+            'Authorization': `Bearer ${token}` 
         }
     });
 
@@ -99,7 +111,6 @@ const Login = () => {
                     <button type="submit" className="login-button" disabled={loading}>
                         {loading ? "Carregando..." : "Login"}
                     </button>
-                    <a link to= "/Registro"></a>
                 </form>
             </div>
         </div>
