@@ -15,7 +15,6 @@ const Login = () => {
     useEffect(() => {
         const token = localStorage.getItem('accessToken');
         const cargo = localStorage.getItem('userCargo');
-        const nome = localStorage.getItem('userNome');
 
         if (token) {
             const expiration = localStorage.getItem('expiration');
@@ -25,7 +24,6 @@ const Login = () => {
                 localStorage.removeItem('accessToken');
                 localStorage.removeItem('edxpiration');
                 localStorage.removeItem('userCargo');
-                localStorage.removeItem('userNome');
                 navigate('/login');
             }
         }
@@ -52,12 +50,10 @@ const Login = () => {
                 const decodedToken = jwtDecode(token); 
 
                 const cargo = decodedToken.cargo;
-                const nome = decodedToken.nome;
                 const expiration = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
                 localStorage.setItem('accessToken', token);
                 localStorage.setItem('expiration', expiration.toISOString());
                 localStorage.setItem('userCargo', cargo); 
-                localStorage.setItem('userNome', nome);
                 navigate("/PaginaInicial");
             } else {
                 setError(response.data.message);
