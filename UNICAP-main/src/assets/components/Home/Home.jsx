@@ -2,6 +2,8 @@ import "../Home/Home.css";
 import React, { useState, useEffect } from "react";
 import Sidebar from '../../components/SideBar/Sidebar.jsx';
 
+const apiUrl = process.env.API_URL;
+
 const Home = () => {
     const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -29,7 +31,7 @@ const Home = () => {
     useEffect(() => {
         const fetchArticles = async () => {
             try {
-                const response = await fetch("https://localhost:44365/api/Article/GetAllArticles");
+                const response = await fetch(`${apiUrl}Article/GetAllArticles`);
                 const data = await response.json();
                 setArticles(data.collections.itens);
                 setLoading(false);
@@ -44,7 +46,7 @@ const Home = () => {
 
     const handleCreateArticle = async () => {
         try {
-            const response = await fetch("https://localhost:44365/api/Article/CreateArticle", {
+            const response = await fetch(`${apiUrl}Article/CreateArticle`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -66,7 +68,7 @@ const Home = () => {
 
     const handleEditArticle = async (article) => {
         try {
-            const response = await fetch(`https://localhost:44365/api/Article/UpdateArticle`, {
+            const response = await fetch(`${apiUrl}Article/UpdateArticle`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
@@ -90,7 +92,7 @@ const Home = () => {
 
     const handleDeleteArticle = async (id) => {
         try {
-            const response = await fetch(`https://localhost:44365/api/Article/DeleteArticle?Id=${id}`, {
+            const response = await fetch(`${apiUrl}Article/DeleteArticle?Id=${id}`, {
                 method: "DELETE",
             });
             if (response.ok) {
