@@ -31,7 +31,7 @@ const Home = () => {
             try {
                 const response = await fetch(`https://cursoapi.azurewebsites.net/api/Article/GetAllArticles`);
                 const data = await response.json();
-                setArticles(data.collections.itens);
+                setArticles(data.collections);
                 setLoading(false);
             } catch (error) {
                 console.error("Erro ao buscar artigos:", error);
