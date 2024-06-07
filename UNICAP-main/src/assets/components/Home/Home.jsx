@@ -138,7 +138,7 @@ const Home = () => {
                 {loading ? (
                     <p>Carregando artigos...</p>
                 ) : (
-                    articles.collections.length === 0 ? (
+                    articles?.length === 0 ? (
                         <p>Nenhum artigo encontrado.</p>
                     ) : (
                         articles.map((article, index) => (
