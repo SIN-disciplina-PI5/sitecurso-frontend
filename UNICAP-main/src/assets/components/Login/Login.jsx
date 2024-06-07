@@ -5,6 +5,8 @@ import { jwtDecode } from "jwt-decode";
 import "./Login.css";
 import unicapImage from '../../images/unicap.png';
 
+const apiUrl = process.env.API_URL;
+
 const Login = () => {
     const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
@@ -34,7 +36,7 @@ const Login = () => {
         setLoading(true);
         setError("");  
         try {
-            const response = await axios.post("https://localhost:44365/api/Auth/Login", { 
+            const response = await axios.post(`${apiUrl}Auth/Login`, { 
                 login,
                 password
             }, {
@@ -69,7 +71,7 @@ const Login = () => {
     const token = localStorage.getItem('accessToken'); 
 
     const axiosInstance = axios.create({
-        baseURL: 'https://localhost:44365/api/', 
+        baseURL: `${apiUrl}`, 
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}` 
