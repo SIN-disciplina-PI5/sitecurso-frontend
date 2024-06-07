@@ -80,7 +80,7 @@ const Home = () => {
             });
             const data = await response.json();
             console.log(data); 
-            setArticles(articles.map((item) => (item.id === article.id ? { ...item, titulo: titulo, descricao: descricao } : item)));
+            setArticles(articles?.map((item) => (item.id === article.id ? { ...item, titulo: titulo, descricao: descricao } : item)));
             setShowForm(false);
             setEditingArticle(null);
         } catch (error) {
@@ -94,7 +94,7 @@ const Home = () => {
                 method: "DELETE",
             });
             if (response.ok) {
-                setArticles(articles.filter((article) => article.id !== id));
+                setArticles(articles?.filter((article) => article.id !== id));
                 console.log("Artigo excluído com sucesso!");
             } else {
                 console.error("Erro ao excluir artigo:", response.statusText);
@@ -141,7 +141,7 @@ const Home = () => {
                     articles?.length === 0 ? (
                         <p>Nenhum artigo encontrado.</p>
                     ) : (
-                        articles.map((article, index) => (
+                        articles?.map((article, index) => (
                             <div key={index} className="article">
                                 <h2>{article.titulo}</h2>
                                 <p>{article.descricao}</p>
