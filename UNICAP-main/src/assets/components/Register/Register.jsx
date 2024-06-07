@@ -3,8 +3,6 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import "../Register/Register.css"; 
 
-const apiUrl = process.env.API_URL;
-
 function RegisterUser() {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
@@ -28,7 +26,7 @@ function RegisterUser() {
     };
 
     try {
-        const response = await axios.post(`${apiUrl}User/CreateUser`, userData);
+        const response = await axios.post(`https://cursoapi.azurewebsites.net/api/User/CreateUser`, userData);
         console.log('Usuário criado com sucesso:', response.data);
         alert('Usuário criado com sucesso!');
         navigate('/login'); 
