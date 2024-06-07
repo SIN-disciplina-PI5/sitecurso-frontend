@@ -11,6 +11,15 @@ const NavBar = () => {
     setMode(!active);
   };
 
+  const logout = () => {
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('edxpiration');
+    localStorage.removeItem('userCargo');
+    localStorage.removeItem('id');
+    localStorage.removeItem('nome');
+    navigate('/');
+  }
+
   return (
     <>
       <div id="menu" onClick={toggleMode}>
@@ -21,15 +30,16 @@ const NavBar = () => {
           <img src={logo} alt="logo da Clinica Ativamente" height={35} />
         </div>
         <div className={`navLinks ${active ? 'active' : ''}`} id="SidenavLinksUl">
-          <NavLink to="/sobre-o-sin" onClick={toggleMode}>
+          {/* <NavLink to="/sobre-o-sin" onClick={toggleMode}>
             <li className="navLinksLi">Artigos</li>
-          </NavLink>
-          <a href="" target='_blank' onClick={toggleMode}>
+          </NavLink> */}
+          {/* <a href="" target='_blank' onClick={toggleMode}>
             <li className="navLinksLi">Professores</li>
-          </a>
+          </a> */}
           <div className="loginButtons">
-            <NavLink to='/Login' className="loginButton" onClick={toggleMode}>
-              Entrar
+            <p className='user-name'>{localStorage.getItem('nome')}</p>
+            <NavLink to='/' className="loginButton" onClick={logout}>
+              Sair
             </NavLink>
           </div>
         </div>

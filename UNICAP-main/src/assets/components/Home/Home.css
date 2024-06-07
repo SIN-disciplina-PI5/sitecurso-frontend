@@ -90,15 +90,21 @@ justify-content: space-between;
 
 .article {
     background-color: #ffffff;
-    border: 2px solid #677171;
+    /* border: 2px solid #677171; */
     border-radius: 10px;
     padding: 20px;
     width: 100%;
-    text-align: center;
+    max-width: 30rem;
+    height: 100%;
+    max-height: 20rem;
+    text-align: left;
+    box-shadow: 1px 0px 2px 2px #00000020;
+    word-wrap: break-word;
+    overflow-y: auto;
 }
 
 .article h2 {
-    color: #690013;
+    color: #444444;
     font-family: Inter;
     font-size: 25px;
     margin-bottom: 10px;
@@ -109,6 +115,74 @@ justify-content: space-between;
     font-family: "Inter", Arial, Helvetica, sans-serif;
     font-size: 16px;
     text-align: justify;
+}
+
+.article .author {
+    font-size: .8rem;
+    font-weight: normal;
+    color: #000000;
+    }
+    
+    .article .text-container {
+        background-color: #f7f7f7;
+        max-width: 25rem;
+        min-width: 90%;
+        min-height: 30%;
+        max-height: 6rem;
+        padding: .7rem .3rem;
+        border-radius: .3rem;
+        overflow-y: auto;
+        }
+
+        .article .text-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .article .text-container::-webkit-scrollbar-track {
+            border-radius: 15px;
+        }
+        
+        .article .text-container::-webkit-scrollbar-thumb {
+            background: #9c9c9c4b;
+            border-radius: 10px;
+        }
+        
+        .article .article-text {
+            max-width: 100%;
+            font-size: .9rem;
+            font-weight: 400;
+            color: #000000;
+            text-wrap: wrap;
+            word-wrap: break-word;
+}
+
+.btn {
+    padding: .5rem 1rem;
+    margin: .5rem;
+    cursor: pointer;
+    border: 1px solid #cf5269;
+    border-radius: .3rem;
+    background-color: #cf5269;
+    color: #FFFFFF;
+    transition: .3s;
+}
+    
+.btn:hover {
+    background-color: transparent;
+    border: 1px solid #cf5269;
+    color: #cf5269;
+}
+
+.edit-btn-color {
+    background-color: transparent;
+    border: 1px solid #cf5269;
+    color: #cf5269;
+}
+
+.edit-btn-color:hover {
+    background-color: #cf5269;
+    border: 1px solid #cf5269;
+    color: #FFFFFF;
 }
 
 /* Media query para telas menores */

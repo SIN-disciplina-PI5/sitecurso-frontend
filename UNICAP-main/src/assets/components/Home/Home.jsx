@@ -9,13 +9,14 @@ const Home = () => {
     const [showForm, setShowForm] = useState(false);
     const [titulo, setTitulo] = useState("");
     const [descricao, setDescricao] = useState("");
-    const [nome, setUserNome] = useState(null);
+    const [userName, setUserNome] = useState(null);
+    const [id, setUserId] = useState(null);
     const [editingArticle, setEditingArticle] = useState(null);
 
     useEffect(() => {
-        const nome = localStorage.getItem('userNome');
-        if(nome) {
-            setUserNome(nome);
+        const userName = localStorage.getItem('userName');
+        if(userName) {
+            setUserNome(userName);
         }
     }, []);
 
@@ -23,6 +24,13 @@ const Home = () => {
         const cargo = localStorage.getItem('userCargo');
         if (cargo) {
             setUserCargo(parseInt(cargo)); 
+        }
+    }, []);
+
+    useEffect(() => {
+        const id = localStorage.getItem('id');
+        if (id) {
+            setUserId(parseInt(id)); 
         }
     }, []);
 
@@ -52,12 +60,12 @@ const Home = () => {
                 body: JSON.stringify({
                     titulo: titulo,
                     descricao: descricao,
-                    nome: nome,
+                    userId: id
                 })
             });
             const data = await response.json();
             console.log(data); 
-            setArticles([...articles, { id: data.id, titulo: titulo, descricao: descricao, nome: nome }]); 
+            // setArticles([...articles, { id: data.id, titulo: titulo, descricao: descricao, nome: nome }]); 
             setShowForm(false); 
         } catch (error) {
             console.error("Erro ao criar artigo:", error);
@@ -75,7 +83,7 @@ const Home = () => {
                     id: article.id,
                     titulo: titulo,
                     descricao: descricao,
-                    nome: nome,
+                    nome: userName,
                 })
             });
             const data = await response.json();
@@ -144,12 +152,18 @@ const Home = () => {
                         articles?.map((article, index) => (
                             <div key={index} className="article">
                                 <h2>{article.titulo}</h2>
-                                <p>{article.descricao}</p>
-                                <p>Autor: {nome}</p>
+                                <br />
+                                <p className="author">Autor: <span>{article?.userName}</span> </p>
+                                <br/>
+                                <br />
+                                <div className="text-container">
+                                <p className="article-text">{article.descricao}</p>
+                                </div>
+                                <br/>
                                 {userCargo === 3 && (
                                     <div>
-                                        <button onClick={() => handleEditClick(article)}>Editar</button>
-                                        <button onClick={() => handleDeleteArticle(article.id)}>Excluir</button>
+                                        <button className="btn edit-btn-color" onClick={() => handleEditClick(article)}>Editar</button>
+                                        <button className="btn" onClick={() => handleDeleteArticle(article.id)}>Excluir</button>
                                     </div>
                                 )}
                             </div>

@@ -11,10 +11,35 @@ const NavBar = () => {
     setMode(!active);
   };
 
+  const logout = () => {
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('edxpiration');
+    localStorage.removeItem('userCargo');
+    localStorage.removeItem('id');
+    localStorage.removeItem('nome');
+    navigate('/');
+  }
+
+  const renderButtonLoginOrLogout = () => {
+    if (localStorage.getItem('accessToken') == null) {
+      return (
+        <NavLink to='/Login' className="loginButton">
+          Entrar
+        </NavLink>
+      )
+    } else {
+      return (
+      <NavLink to='/' className="loginButton" onClick={logout}>
+          Sair
+        </NavLink>
+      )
+    }
+  }
+
   return (
     <div id="navBar">
       <div className="logo">
-        <img src={logo} alt="logo da Clinica Ativamente" height={35} />
+        <img src={logo} alt="logo da Unicap" height={35} />
       </div>
       <div className={`navLinks ${active ? 'active' : ''}`} id="navLinksUl">
         <NavLink to="/sobre-o-sin" onClick={toggleMode}>
@@ -33,9 +58,13 @@ const NavBar = () => {
           <li className="navLinksLi">PIBIC</li>
         </a>
         <div className="loginButtons">
-        <NavLink to='/Login' className="loginButton">
+        {/* <NavLink to='/Login' className="loginButton">
           Entrar
         </NavLink>
+        <NavLink to='/' className="loginButton" onClick={logout}>
+          Sair
+        </NavLink> */}
+        {renderButtonLoginOrLogout()}
       </div>
       
       </div>

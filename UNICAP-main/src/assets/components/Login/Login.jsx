@@ -24,6 +24,8 @@ const Login = () => {
                 localStorage.removeItem('accessToken');
                 localStorage.removeItem('edxpiration');
                 localStorage.removeItem('userCargo');
+                localStorage.removeItem('id');
+                localStorage.removeItem('nome');
                 navigate('/login');
             }
         }
@@ -47,13 +49,16 @@ const Login = () => {
                 const data = response.data.collections;
                 const token = data.accessToken;
 
-                const decodedToken = jwtDecode(token); 
+                const decodedToken = jwtDecode(token);
+                console.log(jwtDecode(token)) 
 
                 const cargo = decodedToken.cargo;
                 const expiration = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
                 localStorage.setItem('accessToken', token);
                 localStorage.setItem('expiration', expiration.toISOString());
                 localStorage.setItem('userCargo', cargo); 
+                localStorage.setItem('id', decodedToken.sub);
+                localStorage.setItem('nome', decodedToken.nome);
                 navigate("/PaginaInicial");
             } else {
                 setError(response.data.message);
