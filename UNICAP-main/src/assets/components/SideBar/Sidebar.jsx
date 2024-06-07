@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from '../../images/Logo_UNICAP.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
-import './SideBar.css';
+import '/src/assets/components/SideBar/Sidebar.css';
 
 const NavBar = () => {
   const [active, setMode] = useState(false);
