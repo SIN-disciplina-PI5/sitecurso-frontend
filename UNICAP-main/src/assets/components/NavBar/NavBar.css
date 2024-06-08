@@ -5,6 +5,7 @@
   padding: 20px 55px;
   width: 100%;
   max-width: 1980px;
+  background-color: #FFFFFF;
 }
 
 #navLinksUl {
@@ -26,9 +27,9 @@
   font-size: 18px;
 }
 #navLinksUl a li:hover{
-  color: #000;
-  font-size: 20px;
-  transition: 0.8s;
+  color: #bd223e;
+  /* font-size: 20px;
+  transition: 0.8s; */
 }
 
 #menu {
@@ -40,6 +41,8 @@
 }
 
 #navBar .loginButtons {
+  font-weight: 500;
+  font-family: Inter;
   display: flex;
   gap: 10px;
   margin-left: auto; 
@@ -56,7 +59,7 @@
 }
 
 #navBar .loginButton:hover {
-  background-color: #48000d;
+  background-color: #b40e2c;
 }
 
 @media (max-width: 940px) {

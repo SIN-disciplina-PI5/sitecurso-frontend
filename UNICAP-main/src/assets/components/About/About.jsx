@@ -21,9 +21,10 @@ const toggleMode = () => {
     return (
         <div id="sobreoSin">
             <div className="backgroundNavbar">
-        <NavBar />
-      </div>
+                <NavBar />
+            </div>
             <div className='aboutBoxTitle'>
+                <br />
                 <h2 className='titleAbout'>Sistemas para Internet</h2>
                 <h3 className='SubtitleAbout'>Curso Superior de Tecnologia</h3>
             </div>
@@ -38,10 +39,9 @@ const toggleMode = () => {
 
 
             <div className="aboutContent" id='sobreoSin'>
-                <div className="aboutSpace"></div>
+                {/* <div className="aboutSpace"></div> */}
                 <div className="boxContentRigth">
                     <div className="aboutContentRight" data-aos="fade-up">
-
                         <p>De forma orgânica e sistêmica, oferecer uma formação integral de modo a formar profissionais capazes de projetar, analisar, e desenvolver soluções computacionais focadas na plataforma web, atreladas a uma boa visão estratégica de qualidade de software e com direção empreendedora de modelo de negócios, para atender e suprir demandas da sociedade e do mundo do trabalho.</p>
                     </div>
 

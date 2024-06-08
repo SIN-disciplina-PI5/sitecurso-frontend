@@ -2,17 +2,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 80px;
     height: 100%;
     background-color: #690013;
     padding-bottom: 50px;
+    margin-top: 10px;
 }
 
 .gestaoPessoasCardsContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
-    
+    margin-top: 0px;
 }
 
 .gestaoPessoasContainer{
@@ -24,8 +24,7 @@
 .gestaoPessoasTitle{
     font-family: inter, sans-serif;
     color: #ffffff;
-    margin-top: 6%;
-    
+    margin-top: 5%;
 }
 
 

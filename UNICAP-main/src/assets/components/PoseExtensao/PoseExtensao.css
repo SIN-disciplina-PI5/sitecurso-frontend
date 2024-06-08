@@ -135,8 +135,9 @@ hr{
 }
 
 .FotoRobotica img{
-    width: 100%;
-    height: 150px;
+    max-height: 100%;
+    max-width: 100%;
+
 }
 
 .BoxRobotica{
@@ -144,6 +145,17 @@ display: flex;
 flex-direction: row;
 
 }
+
+.container {
+    width: 50vmin;  /* Define a largura do quadrado */
+    height: 50vmin; /* Define a altura do quadrado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Esconde qualquer parte da imagem que exceda o quadrado */
+
+  }
 
 @media(max-width: 1024px) {
     .FooterContainer{

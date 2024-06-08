@@ -15,8 +15,6 @@ const PosEextensao = () => {
                     <div className="Title">
                         <h1>Pós - Graduação</h1>
                         <p>Programas de Pós-Graduação</p>
-
-
                     </div>
                     <div className="SubContainerContent">
                         <div className="TitleContent">
@@ -59,8 +57,10 @@ const PosEextensao = () => {
 
                     </div>
                     <div className="SubContainerContent">
-                        <div className="FotoRobotica">
-                            <img src={Robotica} alt="" />
+                        <div className="container">
+                            <div className="FotoRobotica">
+                                <img src={Robotica} alt="" />
+                            </div>
                         </div>
                         <div className="BoxRobotica">
                             <div className="Content">
@@ -76,7 +76,7 @@ const PosEextensao = () => {
                         <div className="Lermais">
                         <h2>Presencial</h2>
 
-                            <a href="https://portal.unicap.br/w/robotica-aplicada-a-educacao-uso-do-nao-para-o-ensino-de-linguagem-de-programacao" className="Lermais" target='_blank'>Ler Mais <FaArrowRightLong color="#690013" /></a>
+                            <a href="https://portal.unicap.br/w/robotica-aplicada-a-educacao-uso-do-nao-para-o-ensino-de-linguagem-de-programacao"  target='_blank'>Ler Mais <FaArrowRightLong color="#690013" /></a>
 
                         </div>
                     </div>

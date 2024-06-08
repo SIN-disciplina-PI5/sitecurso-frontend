@@ -45,13 +45,10 @@ const Operation = () => {
   ];
 
   return (
-    
-
     <div id="gestaoPessoas">
               <div className="backgroundNavbar">
         <NavBar />
       </div>
-
       <h2 className="gestaoPessoasTitle">Corpo Docente</h2>
       <div className="gestaoPessoasContainer">
         <div className="gestaoPessoasCardsContainer">

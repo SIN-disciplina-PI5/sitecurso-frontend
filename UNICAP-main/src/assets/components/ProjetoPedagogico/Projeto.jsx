@@ -3,27 +3,42 @@ import NavBar from "../NavBar/NavBar";
 
 const Projeto = () => {
   return (
-    <div id="projetoPedagogico">
-              <NavBar />
+    <div id="sobreoSin1">
+            <div className="backgroundNavbar">
+                <NavBar />
+            </div>             
 
-      <div className="ProjetoPedagógico">
+        <div className='aboutBoxTitle1'>
+            <br />
+            <h2 className='titleAbout1'>Avaliação Institucional</h2>
+            <h3 className='SubtitleAbout1'>a UNICAP está realizando a auto-avaliação conforme o Sistema Nacional de Avaliação da Educação Superior</h3>
+        </div>
 
-        <h1 className="Title">Avaliação Institucional</h1>
-        <p className="TextContent">
-          a UNICAP está realizando a auto-avaliação conforme o Sistema Nacional de Avaliação da Educação Superior (SINAES), estabelecido pela Lei nº 10.861, de 14.04.2004.
-        </p>
-        <h1 className="Title">Regime de Aprovação</h1>
-        <p className="TextContent">
-        o regime de aprovação em cada disciplina obedece ao Regimento da UNICAP</p>
-        <h1 className="Title">Avaliação do Aluno</h1>
-        <p className="TextContent">
-        a avaliação é concebida como um dos mecanismos de acompanhamento da aprendizagem do aluno e se realiza de forma processual e diagnóstica, cujo o objetivo é atuar preventivamente na melhoria do desempenho dos alunos.        </p>
-
-      </div>
-
-      <hr></hr>
-
-
+        <div className="aboutSpace1"></div>
+            <div className='AboutCourse1'>
+                    <p>Regime de Aprovação</p>
+            </div>
+            <div className="aboutContent1" id='sobreoSin'>
+                {/* <div className="aboutSpace"></div> */}
+                <div className="boxContentRigth1">
+                    <div className="aboutContentRight1" data-aos="fade-up">
+                        <p>O regime de aprovação em cada disciplina obedece ao Regimento da UNICAP</p>
+                    </div>
+                </div>
+            </div>
+            <div className='AboutCourse1'>
+                    <p>Avaliação do Aluno</p>
+            </div>
+            <div className="aboutContent1" id='sobreoSin'>
+                {/* <div className="aboutSpace"></div> */}
+                <div className="boxContentRigth1">
+                    <div className="aboutContentRight1" data-aos="fade-up">
+                        <p>a avaliação é concebida como um dos mecanismos de acompanhamento 
+                          da aprendizagem do aluno e se realiza de forma processual e diagnóstica, cujo o objetivo é 
+                          atuar preventivamente na melhoria do desempenho dos alunos. </p>
+                    </div>
+                </div>
+            </div>        
     </div>
 
   );
