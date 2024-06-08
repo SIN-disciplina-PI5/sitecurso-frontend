@@ -18,7 +18,7 @@ const Projeto = () => {
             <div className='AboutCourse1'>
                     <p>Regime de Aprovação</p>
             </div>
-            <div className="aboutContent1" id='sobreoSin'>
+            <div className="aboutContent1">
                 {/* <div className="aboutSpace"></div> */}
                 <div className="boxContentRigth1">
                     <div className="aboutContentRight1" data-aos="fade-up">
@@ -26,11 +26,11 @@ const Projeto = () => {
                     </div>
                 </div>
             </div>
+            
             <div className='AboutCourse1'>
                     <p>Avaliação do Aluno</p>
             </div>
-            <div className="aboutContent1" id='sobreoSin'>
-                {/* <div className="aboutSpace"></div> */}
+            <div className="aboutContent1">
                 <div className="boxContentRigth1">
                     <div className="aboutContentRight1" data-aos="fade-up">
                         <p>a avaliação é concebida como um dos mecanismos de acompanhamento 

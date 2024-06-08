@@ -22,7 +22,7 @@ const toggleMode = () => {
         <div id="sobreoSin">
             <div className="backgroundNavbar">
                 <NavBar />
-            </div>
+        </div>
             <div className='aboutBoxTitle'>
                 <br />
                 <h2 className='titleAbout'>Sistemas para Internet</h2>
@@ -38,7 +38,7 @@ const toggleMode = () => {
             </div>
 
 
-            <div className="aboutContent" id='sobreoSin'>
+            <div className="aboutContent" >
                 {/* <div className="aboutSpace"></div> */}
                 <div className="boxContentRigth">
                     <div className="aboutContentRight" data-aos="fade-up">

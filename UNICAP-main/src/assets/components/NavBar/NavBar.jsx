@@ -39,7 +39,9 @@ const NavBar = () => {
   return (
     <div id="navBar">
       <div className="logo">
+        <NavLink to="/">
         <img src={logo} alt="logo da Unicap" height={35} />
+        </NavLink>
       </div>
       <div className={`navLinks ${active ? 'active' : ''}`} id="navLinksUl">
         <NavLink to="/sobre-o-sin" onClick={toggleMode}>
