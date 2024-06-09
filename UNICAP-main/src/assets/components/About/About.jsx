@@ -26,6 +26,7 @@ const toggleMode = () => {
             <div className='aboutBoxTitle'>
                 <br />
                 <h2 className='titleAbout'>Sistemas para Internet</h2>
+                <br />
                 <h3 className='SubtitleAbout'>Curso Superior de Tecnologia</h3>
             </div>
 

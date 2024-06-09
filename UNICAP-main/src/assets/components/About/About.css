@@ -33,7 +33,6 @@
     text-align: center;
     font-family: Inter;
     font-size: 30px;
-    font-style: italic;
     font-weight: 400;
     line-height: normal;
 }
@@ -71,6 +70,8 @@
     font-family: 'Poppins', sans-serif;
     width: 60%;
     padding: 0px 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 20px;
     text-shadow: 2px 2px 4px rgb(42, 41, 41);
     text-align: justify;
