@@ -29,13 +29,8 @@ const toggleMode = () => {
                 <br />
                 <h3 className='SubtitleAbout'>Curso Superior de Tecnologia</h3>
             </div>
-
-            <div className="aboutSpace"></div>
-
             <div className='AboutCourse'>
-
                     <p>Sobre o curso</p>
-
             </div>
 
 

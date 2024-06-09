@@ -110,6 +110,7 @@
     background-color: #9C001C;
     padding: 25px 0px 25px 0px;
     width: 250px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -206,6 +207,7 @@
 
     .Card {
         margin-top: 20px;
+        width: 220px;
         ;
     }
 }
@@ -257,7 +259,7 @@
 
     @media(max-width: 690px) {
         .aboutBoxTitle .titleAbout {
-            font-size: 40px;
+            font-size: 30px;
 
         }
 
