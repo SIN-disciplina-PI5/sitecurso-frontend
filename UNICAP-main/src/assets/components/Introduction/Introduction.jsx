@@ -35,14 +35,14 @@ const [ active, setMode ] = useState(false);
                     </div>
                     
                 </div>
-                <div className="botoes">
+                {/* <div className="botoes">
                     <div >
-                    <Link to="sobreoSin" smooth={true} duration={500} onClick={toggleMode}>
+                    <Link to="/sobre-o-sin" smooth={true} duration={500} onClick={toggleMode}>
 
                         <a  className="btnHeader" target='blank'>Sobre o curso</a>
                     </Link>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <div className='Subcontainer_2'>
