@@ -128,20 +128,25 @@ const Home = () => {
                 <div className="article-box">
                     <p>Artigos</p>
                     {userCargo === 3 && (
-                        <button className="special-button" onClick={() => setShowForm(true)}>Criar Artigo</button>
+                        <button className="btn" onClick={() => setShowForm(true)}>Criar Artigo</button>
                     )}
                 </div>
                 {showForm && (
-                    <div className="article-form">
-                        <input type="text" placeholder="Título" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
-                        <textarea placeholder="Descrição" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
-                        {editingArticle ? (
-                            <button onClick={() => handleEditArticle(editingArticle)}>Salvar</button>
-                        ) : (
-                            <button onClick={handleCreateArticle}>Criar</button>
-                        )}
-                        <button onClick={() => { setShowForm(false); setEditingArticle(null); }}>Fechar</button>
-                    </div>
+                    <section className="form-background-container">
+                        <div className="article-form">
+                            {editingArticle ? (<h4 className="form-title">Editar artigo</h4>) : (<h4 className="form-title">Criar novo artigo</h4>)}
+                            <input type="text" placeholder="Título" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
+                            <textarea placeholder="Descrição" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
+                                <div className="buttons-wrapper">
+                                    {editingArticle ? (
+                                        <button className="btn" onClick={() => handleEditArticle(editingArticle)}>Salvar</button>
+                                    ) : (
+                                        <button className="btn" onClick={handleCreateArticle}>Criar</button>
+                                    )}
+                                    <button className="btn" onClick={() => { setShowForm(false); setEditingArticle(null); }}>Fechar</button>
+                                </div>
+                        </div>
+                    </section>
                 )}
                 {loading ? (
                     <p>Carregando artigos...</p>

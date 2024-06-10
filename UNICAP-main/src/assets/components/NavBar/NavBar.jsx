@@ -29,9 +29,11 @@ const NavBar = () => {
       )
     } else {
       return (
-      <NavLink to='/' className="loginButton" onClick={logout}>
-          Sair
-        </NavLink>
+        <div className='navLinksUl'>
+          <NavLink to='/' className="loginButton" onClick={logout}>
+            Sair
+          </NavLink>
+        </div>
       )
     }
   }
@@ -55,6 +57,9 @@ const NavBar = () => {
         </NavLink> */}
         <NavLink to="/pesquisa-e-extensao" onClick={toggleMode}>
           <li className="navLinksLi">Pesquisa e extensão</li>
+        </NavLink>
+        <NavLink to='/PaginaInicial'>
+            <li className='navLinksLi'>Artigos</li>
         </NavLink>
         {/* <a href="https://portal.unicap.br/pesquisa" target='_blank'>
           <li className="navLinksLi">PIBIC</li>
