@@ -20,8 +20,10 @@ const NavBar = () => {
     navigate('/');
   }
 
+  const isLoggedOut = () => localStorage.getItem('accessToken') == null;
+
   const renderButtonLoginOrLogout = () => {
-    if (localStorage.getItem('accessToken') == null) {
+    if (isLoggedOut()) {
       return (
         <NavLink to='/Login' className="loginButton">
           Entrar
@@ -34,6 +36,16 @@ const NavBar = () => {
             Sair
           </NavLink>
         </div>
+      )
+    }
+  }
+
+  const renderArticlesButton = () => {
+    if (!isLoggedOut()) {
+      return (
+        <NavLink to='/PaginaInicial'>
+            <li className='navLinksLi'>Artigos</li>
+        </NavLink>
       )
     }
   }
@@ -58,9 +70,7 @@ const NavBar = () => {
         <NavLink to="/pesquisa-e-extensao" onClick={toggleMode}>
           <li className="navLinksLi">Pesquisa e extensão</li>
         </NavLink>
-        <NavLink to='/PaginaInicial'>
-            <li className='navLinksLi'>Artigos</li>
-        </NavLink>
+        {renderArticlesButton()}
         {/* <a href="https://portal.unicap.br/pesquisa" target='_blank'>
           <li className="navLinksLi">PIBIC</li>
         </a> */}
