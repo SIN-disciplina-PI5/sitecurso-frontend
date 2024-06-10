@@ -1,22 +1,15 @@
-# API .NET 8 com Entity Framework e JWT
+# Site do Curso de Sistemas para Internet
 
 ## Descrição
-
-Este projeto é uma API simples desenvolvida em .NET 8 que utiliza Entity Framework para gerenciamento de dados e JWT (JSON Web Tokens) para autenticação. A API permite a realização de operações CRUD (Criar, Ler, Atualizar, Deletar) em dois tipos de entidades: usuários e artigos.
+Este projeto é o site para o curso de Sistemas para Internet, desenvolvido com React e utilizando Vite como ferramenta de build. A aplicação é destinada a fornecer informações sobre o curso, incluindo detalhes curriculares, informações sobre professores, notícias e eventos, e recursos para alunos.
 
 ## Tecnologias Utilizadas
-
-- .NET 8
-- Entity Framework Core
-- PostgreSQL
-- JWT Authentication
+- React 18
+- Vite 3
+- CSS Modules para estilização
+- React Router para roteamento
 
 ## Pré-requisitos
-
-Para executar este projeto, você precisará:
-- .NET SDK 8
-- PostgreSQL (ou qualquer outro banco de dados compatível que você preferir; ajustes na string de conexão podem ser necessários)
-- Um editor de código, como Visual Studio ou VSCode
-
-## Excecutando Migrações
-- `dotnet ef database update`
+Antes de iniciar, certifique-se de ter instalado:
+- Node.js versão 16.x ou superior
+- npm (este projeto usa npm como gerenciador de pacotes)
